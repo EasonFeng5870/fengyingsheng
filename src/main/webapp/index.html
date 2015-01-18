@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>冯英胜个人网站 | Eason personal website</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/modules/index.js"></script>
+    <script type="text/javascript" src="js/modules/baidustatic.js"></script>
+    <script type="text/javascript">
+        function signinCallback(authResult) {
+            if (authResult['access_token']) {
+                console.log(authResult);
+                //save access_token to db.
+                // 已成功授权
+                // 用户已授权，隐藏登录按钮，例如：
+                document.getElementById('signinButton').setAttribute('style', 'display: none');
+            } else if (authResult['error']) {
+                // 存在错误。
+                // 可能的错误代码：
+                //   “access_denied” - 用户拒绝访问您的应用
+                //   “immediate_failed”- 无法自动登录用户帐户
+                // console.log('存在错误：' + authResult['error']);
+            }
+        }
+        function disconnectUser(access_token){
+            var revokeUrl = 'https://accounts.google.com/o/oauth2/revoke?token=' +access_token;
+            // 执行异步 GET 请求。
+            $.ajax({
+                type: 'GET',
+                url: revokeUrl,
+                async: false,
+                contentType: "application/json",
+                dataType: 'jsonp',
+                success: function(nullResponse) {
+                    // 客户取消了关联，据此执行相应操作
+                    // 回应始终为未定义。
+                },
+                error: function(e) {
+                    // 处理错误
+                    // console.log(e);
+                    // 如果失败，您可以引导用户手动取消关联
+                    // https://plus.google.com/apps
+                }
+            });
+        }
+        // 可以通过点击一个按钮触发取消关联操作
+        $('#revokeButton').click(disconnectUser);
+    </script>
+</head>
+<body onload="">
+
+<span id="signinButton">
+  <span
+          class="g-signin"
+          data-callback="signinCallback"
+          data-clientid="503958656526-b4mo4p88srp9sl43bol9lub6fb3uds3e.apps.googleusercontent.com"
+          data-cookiepolicy="single_host_origin"
+          data-requestvisibleactions="http://schemas.google.com/AddActivity"
+          data-scope="https://www.googleapis.com/auth/plus.login">
+  </span>
+</span>
+
+<button id="revokeButton">注销</button>
+<!-- 将此异步 JavaScript 代码插入到紧邻 </body> 标记之前 -->
+<script type="text/javascript">
+    (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/client:plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+</script>
+</body>
+</html>

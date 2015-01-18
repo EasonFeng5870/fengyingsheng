@@ -1,0 +1,304 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+    font-family: 'BebasRegular';
+    src: url('font/BEBAS___-webfont.eot');
+    src: url('font/BEBAS___-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/BEBAS___-webfont.woff') format('woff'),
+         url('font/BEBAS___-webfont.ttf') format('truetype'),
+         url('font/BEBAS___-webfont.svg#BebasRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+html,body{
+ font-family: 'BebasRegular';
+	width:100%;
+	height:100%;
+}
+body a{outline:none;blr:expression(this.onFocus=this.blur());}
+a:focus{outline:none;blr:expression(this.onFocus=this.blur());}
+
+.navigation{
+	position:fixed;
+	z-index:1;
+	top:100px;
+	right:10px;
+	list-style-type:none;
+}
+.navigation li{
+
+	background-color: #cacaca;
+	border-radius: 50%;
+	height: 10px;
+	margin-bottom: 6px;
+	opacity: 0.4;
+	text-indent: -9999em;
+	width: 10px;
+	/**color:#333333;
+	display:block;
+	padding: 0 10px;
+	line-height:30px;
+	margin-bottom:2px;
+	font-weight:bold;
+	-webkit-transition: all .2s ease-in-out;
+	border-bottom:1px solid black;
+	text-align:left;
+	width:53px;**/
+}
+.navigation li:hover,.active{
+	background-color: #ccc !important;
+	cursor: pointer;
+	opacity: 1 !important;
+	/**width:100px!important;
+	font-size:25px;**/
+}
+.envatologo{
+position:fixed;
+top:50%;
+left:50%;
+width:446px;
+margin-top:-41px;
+margin-left:-223px;
+z-index:1;
+}
+.slide{
+	background-attachment: fixed;
+	width:100%;
+	height:100%;
+	position: relative;
+	/**box-shadow:inset 0px 10px 10px rgba(0,0,0,0.3);**/
+}
+.wrapper{
+	width:960px;
+	height:200px;
+	margin:0 auto;
+	position:relative;
+}
+.slideno{
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	font-size:100px;
+	font-weight:bold;
+	color:rgba(255,255,255,0.3);
+}
+.button{
+	display:block;
+	width:50px;
+	height:50px;
+	position:absolute;
+	bottom:0px;
+	left:50%;
+	background-color:#333333;
+	background-image:url(../img/arrow.png);
+	border-radius: 50%;
+}
+.button:hover{
+	background-color:#494949;
+	cursor:pointer;
+}
+.button2{
+	display:none;
+	width:50px;
+	height:50px;
+	position:absolute;
+	top:0px;
+	left:50%;
+	background-color:#333333;
+	background-image:url(../img/arrow.png);
+	transform: rotate(180deg);
+	border-radius: 50%;
+}
+.button2:hover{
+	background-color:#494949;
+	cursor:pointer;
+}
+
+/******************************
+ SLIDE 1 
+*******************************/
+#slide1{
+	background-color:#fff;
+	
+}
+/******************************
+ SLIDE 2 
+*******************************/
+#slide2{
+	background-color:#66c3ee;
+	
+}
+#slide2 img:first-child{
+	position:absolute;
+top: 700px;
+left: -150px;
+}
+#slide2 img:nth-child(2){
+	position:absolute;
+	top:300px;
+	left:100px;
+}
+#slide2 img:nth-child(3){
+	position:absolute;
+	top:600px;
+	left:300px;
+}
+#slide2 img:nth-child(4){
+	position:absolute;
+	top:400px;
+	left:300px;
+}
+#slide2 img:nth-child(5){
+	position:absolute;
+	top:600px;
+	right:300px;
+}
+#slide2 img:nth-child(6){
+	position:absolute;
+	top:600px;
+	right:300px;
+}
+#slide2 img:nth-child(7){
+	position:absolute;
+	top:400px;
+	right:100px;
+}
+#slide2 img:nth-child(8){
+	position:absolute;
+	top:100px;
+	right:300px;
+}
+/******************************
+ SLIDE 3 
+*******************************/
+#slide3{
+	background-color:#fff;
+}
+#slide3 img:first-child{
+	position:absolute;
+top: 700px;
+left: 300px;
+}
+#slide3 img:nth-child(2){
+	position:absolute;
+	top:100px;
+	left:100px;
+}
+#slide3 img:nth-child(3){
+	position:absolute;
+	top:150px;
+	left:300px;
+}
+#slide3 img:nth-child(4){
+	position:absolute;
+	top:450px;
+	left:300px;
+}
+#slide3 img:nth-child(5){
+	position:absolute;
+	top:200px;
+	right:300px;
+}
+#slide3 img:nth-child(6){
+	position:absolute;
+	top:100px;
+	right:300px;
+}
+/******************************
+ SLIDE 4 
+*******************************/
+#slide4{
+	background-color:#66c3ee;
+
+}
+#slide4 img:first-child{
+	position:absolute;
+	top: 700px;
+	left: -150px;
+}
+#slide4 img:nth-child(2){
+	position:absolute;
+	top:300px;
+	left:100px;
+}
+#slide4 img:nth-child(3){
+	position:absolute;
+	top:600px;
+	left:300px;
+}
+#slide4 img:nth-child(4){
+	position:absolute;
+	top:400px;
+	left:300px;
+}
+#slide4 img:nth-child(5){
+	position:absolute;
+	top:600px;
+	right:300px;
+}
+#slide4 img:nth-child(6){
+	position:absolute;
+	top:600px;
+	right:300px;
+}
+#slide4 img:nth-child(7){
+	position:absolute;
+	top:400px;
+	right:100px;
+}
+#slide4 img:nth-child(8){
+	position:absolute;
+	top:100px;
+	right:300px;
+}
+.jumbotron {
+	background: linear-gradient(45deg, #020031 0px, #6d3353 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+	box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2) inset, 0 -3px 7px rgba(0, 0, 0, 0.2) inset;
+	color: #fff;
+	padding: 40px 0;
+	position: relative;
+	text-align: center;
+	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 0, 0, 0.075);
+}
+.masthead {
+	color: #fff;
+	margin-bottom: 0;
+	padding: 90px 0 110px;
+	height: 100%;
+}
+.jumbotron:after {
+	background: url("../img/bs-docs-masthead-pattern.png") repeat scroll center center rgba(0, 0, 0, 0);
+	content: "";
+	display: block;
+	left: 0;
+	opacity: 0.4;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.btn-shadow{
+	border: 0 none;
+	box-shadow: 0 -4px 0 #2a6496 inset;
+	color: #fff;
+}
+.btn-lg.btn-shadow {
+	padding: 13px 35px 17px;
+}
+#scropToTheTop{
+bottom: 100px;
+background-color: #777;
+border: medium none;
+bottom: 20px;
+color: #eee;
+font-size: 40px;
+height: 46px;
+line-height: 1;
+opacity: 0.8;
+overflow: hidden;
+right: 20px;
+text-align: center;
+text-decoration: none;
+width: 46px;
+}

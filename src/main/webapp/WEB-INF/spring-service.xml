@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="accountService" class="com.iassistent.server.user.service.AccountServiceImpl">
+        <property name="accountDao" ref="accountDao" />
+    </bean>
+
+    <bean id="sessionService" class="com.iassistent.server.cache.sessionCache.service.SessionServiceImpl">
+        <property name="cacheService" ref="SessionCacheService" />
+    </bean>
+
+    <bean id="SessionCacheService" class="com.iassistent.server.cache.sessionCache.service.SessionCacheServiceImpl">
+        <property name="expiringCacheService" ref="HazelcastGlobalNamedCacheService" />
+        <property name="cacheName" value="RESTSessionCache" />
+        <property name="cacheTtlMinutes" value="240" />
+    </bean>
+
+    <bean id="HazelcastGlobalNamedCacheService" class="com.iassistent.server.cache.service.impl.HazelcastGlobalNamedExpiringCacheService">
+        <property name="hazelcastInstance" ref="HazelcastInstance" />
+    </bean>
+
+    <bean id="HazelcastInstance" class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+        <property name="targetObject" ref="HazelcastManager" />
+        <property name="targetMethod" value="getHazelcastInstance" />
+    </bean>
+
+    <bean id="HazelcastManager" class="com.iassistent.server.hazelcast.HazelcastManager" init-method="initialize"
+          destroy-method="shutdown">
+        <property name="groupName" value="local" />
+        <property name="groupPassword" value="12qwaszx" />
+        <property name="targetHost" value="localhost" />
+    </bean>
+
+
+</beans>

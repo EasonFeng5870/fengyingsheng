@@ -1,0 +1,204 @@
+/*CSS Document*/
+
+*{
+	margin: 0px;
+	padding: 0;
+}
+
+html, body{
+	width: 100%;
+	height: 100%;
+	background-color: #333;
+}
+
+/* NAV BAR SECTION */
+
+#navigation{
+	width: 100%;
+	height: 100%;
+	float: left;
+}
+#navBar{
+	width: 50px;
+	height: 165px;
+	position: fixed;
+	top: 50%;
+	right: 0;
+	margin-top: -82.5px;
+	z-index:1;
+	list-style: none;
+}
+#navBar li{
+	width: 15px;
+	height: 15px;
+	background-color: ghostwhite;
+	border: 5px solid ghostwhite;
+	margin: 12.5px;
+	cursor: pointer;
+	border-radius: 20px;
+	transition-duration: 0.7s;
+	-webkit-transition-duration: 0.7s;
+}
+#navBar li:hover, #navBar .current{
+	transition-duration: 0.7s;
+	-webkit-transition-duration: 0.7s;
+	background-color: transparent;
+}
+
+/* FOR ALL SLIDES */
+
+.slide{
+	background-attachment: fixed;
+	width:100%;
+	height:100%;
+	position: relative;
+}
+
+.button{
+	display:block;
+	width:50px;
+	height:50px;
+	position:absolute;
+	bottom:0px;
+	left:50%;
+	margin-left: -25px;
+	background-color: transparent;
+	background-image:url(../../img/arrow.png);
+	background-repeat:no-repeat;
+	background-position: center center;
+	transition-duration: 0.7s;
+	-webkit-transition-duration: 0.7s; /* Safari */
+}
+.button:hover{
+	background-color: rgba(255,255,255,0.6);
+	cursor:pointer;
+	transition-duration: 0.7s;
+	-webkit-transition-duration: 0.7s; /* Safari */
+}
+.button.last{
+	transform:rotate(180deg);
+	-ms-transform:rotate(180deg); /* IE 9 */
+	-webkit-transform:rotate(180deg); /* Safari and Chrome */
+}
+
+/* SLIDES */
+
+#slide1{
+	background-color: #2474a9;
+}
+#slide2{
+	background-color: #b33921;
+}
+#slide3{
+	background-color: #1aaf5d;
+}
+#slide4{
+	background-color: #775c93;
+}
+/**h1{
+	font-family: Verdana, Geneva, sans-serif;
+	color: rgba(0,0,0,0.3);
+	font-size: 3em;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-left: -235px;
+	margin-top: -59px;
+	z-index: 1;
+}**/
+.ball1{
+	width: 200px;
+	height: 200px;
+	border-radius: 200px;
+	position: absolute;
+	top: 300px;
+	left: 50px;
+	background-color: rgba(0,0,0,0.1);
+}
+.ball2{
+	width: 40px;
+	height: 40px;
+	border-radius: 200px;
+	position: absolute;
+	top: 80px;
+	right: 50px;
+	background-color: rgba(0,0,0,0.1);
+}
+.ball3{
+	width: 150px;
+	height: 150px;
+	border-radius: 200px;
+	position: absolute;
+	top: 30px;
+	right: 200px;
+	background-color: rgba(0,0,0,0.1);
+}
+.ball4{
+	width: 40px;
+	height: 40px;
+	border-radius: 200px;
+	position: absolute;
+	top: 100px;
+	right: 500px;
+	background-color: rgba(0,0,0,0.1);
+}
+
+#slide4 .ball1{
+	width: 200px;
+	height: 200px;
+	border-radius: 200px;
+	position: absolute;
+	top: 490px;
+	left: 900px;
+	background-color: rgba(0,0,0,0.1);
+}
+#slide4 .ball3{
+	width: 200px;
+	height: 200px;
+	border-radius: 200px;
+	position: absolute;
+	top: 600px;
+	left: 500px;
+	background-color: rgba(0,0,0,0.1);
+}
+
+
+/*************************/
+.jumbotron {
+	background: linear-gradient(45deg, #020031 0px, #6d3353 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+	box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2) inset, 0 -3px 7px rgba(0, 0, 0, 0.2) inset;
+	color: #fff;
+	padding: 40px 0;
+	position: relative;
+	text-align: center;
+	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 0, 0, 0.075);
+}
+.masthead {
+	color: #fff;
+	margin-bottom: 0;
+	padding: 90px 0 110px;
+	height: 100%;
+}
+.jumbotron:after {
+	background: url("../../img/bs-docs-masthead-pattern.png") repeat scroll center center rgba(0, 0, 0, 0);
+	content: "";
+	display: block;
+	left: 0;
+	opacity: 0.4;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.btn-shadow{
+	border: 0 none;
+	box-shadow: 0 -4px 0 #2a6496 inset;
+	color: #fff;
+}
+.btn-lg.btn-shadow {
+	padding: 13px 35px 17px;
+}
+/***************************/
+
+
+
+

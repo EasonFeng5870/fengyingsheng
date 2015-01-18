@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        body {
+            font-size: 20px;
+            color: white;
+            text-shadow: 0 1px 0 black, 0 0 5px black;
+        }
+        p {
+            padding: 0 0.5em;
+            margin: 0;
+        }
+        .content {
+            background-attachment: fixed;
+            height: 400px;
+        }
+        #content1 {
+            background-image: url("img/spring.jpg");
+        }
+        #content2 {
+            background-image: url(img/winter.jpg);
+        }
+        #content3 {
+            background-image: url(img/autumn.jpg);
+        }
+        #content4 {
+            background-image: url("img/spring.jpg");
+        }
+        #content5 {
+            background-image: url(img/winter.jpg);
+        }
+        #content6 {
+            background-image: url("img/summer.jpg");
+        }
+    </style>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery.stellar.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $.stellar({
+                horizontalScrolling: false,
+                responsive:true
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="content" id="content1">
+    <p>TEXT HERE</p>
+</div>
+<div class="content" id="content2">
+    <p>TEXT HERE</p>
+</div>
+<div class="content" id="content3" data-stellar-background-ratio="0.5">
+    <p>TEXT HERE</p>
+</div>
+<div class="content" id="content4" data-stellar-background-ratio="0.5">
+    <p>TEXT HERE</p>
+</div>
+<div class="content" id="content5" data-stellar-background-ratio="0.5">
+    <p>TEXT HERE</p>
+</div>
+<div class="content" id="content6" data-stellar-background-ratio="0.5">
+    <p>TEXT HERE</p>
+</div>
+</body>
+</html>
