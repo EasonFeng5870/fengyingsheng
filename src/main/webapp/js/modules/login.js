@@ -23,7 +23,7 @@
                     if(data.responseJSON.password){
                         var res = data.responseJSON;
                         document.cookie = "token=" + (res.username + "|" + res.password) +";path=/";
-                        window.location.href = "dashboard.html";
+                        window.location.href = "admin/index.html";
                     }
                 }
             });
